@@ -1,0 +1,19 @@
+{
+    "name": "messi/projet_kanban",
+    "description": "Projet Kanban",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "MessineB",
+            "email": "messinebelarousi@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/var-dumper": "^6.0"
+    }
+}

@@ -1,0 +1,76 @@
+body{
+    margin-top: 3%;
+    background-color: rgb(121, 197, 248);
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+
+.list-group{
+    margin: 1%;
+    width: 500px;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+}
+
+.form-floating{
+    margin: 0.5%;
+    width: 350px;
+    display: flex;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form .btn-secondary{
+    height: 58px;
+    margin-left: 10px;
+}
+
+.research{
+    width: 350px;
+}
+
+.formAdd{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 3%;
+}
+
+.formAdd .btn-secondary{
+    height: 58px;
+    margin-left: 10px;
+    margin-top: -8px;
+}
+
+a.btn-close{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    z-index: 9999999;
+}
+
+a.btn-secondary{
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    z-index: 9999999;
+}
