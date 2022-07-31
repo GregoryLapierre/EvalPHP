@@ -15,21 +15,37 @@ class Application
             'controller' => 'AllMoviesController',
             'method' => 'index'
         ],
-        'AddMovies' => [
+        'SelectById' => [
             'controller' => 'AllMoviesController',
+            'method' => 'selectById'
+        ],
+        'Admin' => [
+            'controller' => 'AdminController',
+            'method' => 'index'
+        ],
+        'AdminAddMovies' => [
+            'controller' => 'AdminController',
             'method' => 'create'
         ],
-        'RemoveMovies' => [
-            'controller' => 'AllMoviesController',
+        'AdminUpdate' => [
+            'controller' => 'AdminController',
+            'method' => 'update'
+        ],
+        'AdminRemoveMovies' => [
+            'controller' => 'AdminController',
             'method' => 'remove'
         ],
-        'SelectUpdateMovies' => [
-            'controller' => 'AllMoviesController',
-            'method' => 'selectUpdate'
+        'AdminSelectMovies' => [
+            'controller' => 'AdminController',
+            'method' => 'SelectMovies'
         ],
         'error404' => [
             'controller' => 'ErrorController',
             'method' => 'error404'
+        ],
+        'import' => [
+            'controller' => 'ImportController',
+            'method' => 'index'
         ],
     ];
 
@@ -57,15 +73,13 @@ class Application
         // je vérifie si la route demandée existe
         $route = $this->match($route_name);
 
-        // dump($route);
-
         // j'instancie le controller correspondant à la route demandée
         $controller_name = 'App\Controller\\' . $route['controller'];
         $controller = new $controller_name();
+
         // j'appelle la méthode correspondante à la route demandée
         $method_name = $route['method'];
         $controller->$method_name();
-
     }
 }
 
